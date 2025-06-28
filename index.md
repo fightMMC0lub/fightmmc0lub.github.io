@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# 📚 My Learning Notes
+# 📚 if u can read, u can learn....
 
 notes about things I discover.
 
