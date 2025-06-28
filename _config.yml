@@ -1,0 +1,14 @@
+title: "My Learning Journal"
+description: "Notes, discoveries, and everything I'm learning about tech."
+baseurl: ""
+url: "https://fightMMC0lub.github.io"
+theme: minima
+author:
+  name: "3#31200xsN"
+  email: "getshop463@gmail.com"
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
