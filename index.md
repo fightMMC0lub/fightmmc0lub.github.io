@@ -5,12 +5,12 @@ title: Home
 
 # 👋 Welcome to My Learning Journal
 
-This is where I document what I learn daily about Linux, networking, cybersecurity, and tech in general.
+This is where I post my daily discoveries in Linux, OS, and cybersecurity.
 
-## 📝 Recent Notes
+## 📝 Recent Posts
 
 <ul>
-  {% for post in site.posts limit:5 %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
-  {% endfor %}
+{% for post in site.posts limit:5 %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
+{% endfor %}
 </ul>
