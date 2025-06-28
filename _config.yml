@@ -1,29 +1,16 @@
-title: "My Learning Journal"
-description: "My journey through Linux, networks, cybersecurity, and more."
+title: " ____ "
+description: "-_-_-_-_-_-_-_-_-"
 url: "https://fightMMC0lub.github.io"
-baseurl: "" # leave empty for user.github.io sites
+baseurl: ""
 
 author:
   name: "3#31200xsN"
-  email: "getshop463@gmail.com"
 
 theme: minima
 
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:year/:month/:title/
+permalink: /:year/:month/:title/
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-paginate
-
-paginate: 5
-paginate_path: "/page:num/"
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/
