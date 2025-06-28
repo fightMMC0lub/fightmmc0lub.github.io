@@ -1,25 +1,16 @@
 body {
-  font-family: sans-serif;
-  background-color: #000000;
-  color: #e0e0e0;
-  line-height: 1.6;
+  background: #000;
+  color: #f0f0f0;
+  font-family: monospace;
+  line-height: 1.5;
   padding: 2rem;
+  margin: 0;
 }
 
 a {
   color: #4fc3f7;
-  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-header, footer {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-h1, h2 {
-  color: #ffffff;
+ul {
+  padding-left: 1.2em;
 }
