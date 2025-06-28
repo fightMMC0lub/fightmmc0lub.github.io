@@ -1,8 +1,7 @@
-
-  title: "My Learning Journal"
-description: "A personal blog documenting my journey in Linux, networking, cybersecurity, and more."
+title: "My Learning Journal"
+description: "My journey through Linux, networks, cybersecurity, and more."
 url: "https://fightMMC0lub.github.io"
-baseurl: "" # keep empty for root
+baseurl: "" # leave empty for user.github.io sites
 
 author:
   name: "3#31200xsN"
@@ -23,22 +22,8 @@ plugins:
 paginate: 5
 paginate_path: "/page:num/"
 
-# Social links (used in SEO / footer / meta tags)
-social_links:
-  github: https://github.com/fightMMC0lub
-  linkedin: https://linkedin.com/in/fouad-azahaf-51a783335
-  blog: https://the0xtechworld.blogspot.com
-
-# Google Analytics (optional)
-google_analytics: ""
-
-# Build settings
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle
-  - vendor/cache
-  - vendor/gems
-  - vendor/ruby
-
+  - vendor/
