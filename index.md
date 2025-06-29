@@ -3,11 +3,12 @@ layout: default
 title: Home
 ---
 
-# 📚 if u can read, u can learn....
+# Knowledge is the real exploit.
 
-notes about things I discover.
+Logging what I uncover in the shadows.
 
-## 🔥 Recent Posts
+## Recent Drops
+
 
 <ul>
   {% for post in site.posts limit:5 %}
