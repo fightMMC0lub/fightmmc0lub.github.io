@@ -2,10 +2,6 @@
 layout: default
 title: Home
 ---
-# what I uncover in the shadows.
-
-## Recent Drops
-
 
 <ul>
   {% for post in site.posts limit:5 %}
