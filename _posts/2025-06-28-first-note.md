@@ -1,10 +1,8 @@
 ---
 layout: default
-title: "Understanding Ports and Protocols"
+title: "|--Listen: 0.0.0.0/0"
 date: 2025-06-28
 ---
-
-🎯 **ESSENTIAL + BEYOND 101:**  
 
 - 🚪 `HTTP` ............. Port 80 — The OG web surfer 🌐  
 - 🔒 `HTTPS` ........... Port 443 — Secure vibes only 🛡️  
