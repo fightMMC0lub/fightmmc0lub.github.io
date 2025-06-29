@@ -2,10 +2,7 @@
 layout: default
 title: Home
 ---
-
-# Knowledge is the real exploit.
-
-Logging what I uncover in the shadows.
+# what I uncover in the shadows.
 
 ## Recent Drops
 
