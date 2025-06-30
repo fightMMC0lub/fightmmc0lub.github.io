@@ -9,5 +9,6 @@ title: Home
   {% endfor %}
 </ul>
 
-<a href="/archive.html">🔗 View all notes</a><br>
-<a href="/tags.html">🏷 Browse by Tags</a>
+<a href="/archive.html">Archive</a>
+<a href="/tags.html">Tags</a>
+
