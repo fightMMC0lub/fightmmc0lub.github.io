@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "|--EcHooo"
-date: 2025-06-29
+title: "|--AvoiD TrackinG"
+date: 2025-06-30
 ---
 
 # 📘 Simple Privacy Tool: `goog`
