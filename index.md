@@ -11,7 +11,7 @@ title: Home
 
 <a href="/archive/">Archive</a>
 <a href="/tags/">Tags</a>
-<a href="/about/">HowamI</a>
+
 
 
 
