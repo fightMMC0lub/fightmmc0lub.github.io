@@ -12,5 +12,6 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:title/
 
-plugins:
-  - jekyll-feed
+# ADD THIS:
+include:
+  - _pages
