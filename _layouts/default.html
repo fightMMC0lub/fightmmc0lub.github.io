@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+  <header>
+    <h1><a href="/">📚 My Notes</a></h1>
+    <nav>
+      <a href="/">Home</a> |
+      <a href="/archive.html">Archive</a> |
+      <a href="/tags.html">Tags</a>
+    </nav>
+    <hr>
+  </header>
+
   <main>
-    <h1>{{ site.title }}</h1>
     {{ content }}
   </main>
+
+  <footer>
+    <hr>
+    <p>🛠 Maintained by fouad</p>
+  </footer>
 </body>
 </html>
