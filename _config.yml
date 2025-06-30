@@ -12,6 +12,6 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:title/
 
-# ADD THIS:
+
 include:
   - _pages
