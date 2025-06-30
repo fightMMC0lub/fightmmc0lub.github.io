@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "|--Listen: 0.0.0.0/0"
-date: 2025-06-28
+date: 2025-06-28 
+tags: [networking, ports]
 ---
 
 - `HTTP` ............. Port 80 — The OG web surfer 
