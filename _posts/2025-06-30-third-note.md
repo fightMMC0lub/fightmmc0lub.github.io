@@ -2,6 +2,7 @@
 layout: default
 title: "|--AvoiD TrackinG"
 date: 2025-06-30
+tags: [linux, openbsd, wsl, macos]
 ---
 
 # 📘 Simple Privacy Tool: `goog`
