@@ -2,7 +2,6 @@
 layout: default
 title: Linux
 ---
-
 # 🐧 Posts tagged with "Linux"
 
 {% for post in site.posts %}
