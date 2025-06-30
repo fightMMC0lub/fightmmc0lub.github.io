@@ -9,6 +9,7 @@ title: Home
   {% endfor %}
 </ul>
 
-<a href="/archive.html">Archive</a>
-<a href="/tags.html">Tags</a>
+<a href="/archive/">Archive</a>
+<a href="/tags/">Tags</a>
+
 
