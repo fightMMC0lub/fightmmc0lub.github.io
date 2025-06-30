@@ -10,8 +10,8 @@ title: Home
 </ul>
 
 <a href="/archive/">Archive</a>
-<a href="/tags/">Tags</a>
-<a href="/tags/">HowamI</a>
+<a href="/tag/">Tags</a>
+<a href="/tag/">HowamI</a>
 
 
 
