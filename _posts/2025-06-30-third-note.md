@@ -5,16 +5,16 @@ date: 2025-06-30
 tags: [linux, openbsd, wsl, macos]
 ---
 
-# 📘 Simple Privacy Tool: `goog`
+# Simple Privacy Tool: `goog`
 
 A small shell script to perform **Google searches** using the **Lynx text browser**, helping to **reduce tracking** and improve **terminal-based privacy**.
 
-## 🔧 Requirements
+## Requirements
 
 - `lynx` (text-based web browser)
 - Unix-like environment (Linux, macOS, BSD ...)
 
-## 🧪 Usage
+## Usage
 
 ```bash
 ./goog [search terms]
