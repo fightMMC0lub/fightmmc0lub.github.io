@@ -4,7 +4,7 @@ title: Tags
 permalink: /tags/
 ---
 
-# 🏷 Tags
+# Tags
 
 <ul>
   <li><a href="/tag/linux">Linux</a></li>
