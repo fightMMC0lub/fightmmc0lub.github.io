@@ -1,6 +1,6 @@
 body {
   background-color: #000;
-  color: #00ffff;
+  color: #ffffff;
   font-family: monospace;
   margin: 0;
   padding: 0;
@@ -26,13 +26,13 @@ a:hover {
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #00ffff;
+  border: 2px solid #ffffff;
   display: block;
   margin: 0 auto 15px;
 }
 
 .site-title a {
-  color: #00ffff;
+  color: #ffffff;
   font-size: 1.8rem;
 }
 
@@ -54,7 +54,7 @@ a:hover {
 }
 
 hr {
-  border: 1px solid #00ffff;
+  border: 1px solid #ffffff;
   margin: 20px auto;
   width: 90%;
 }
