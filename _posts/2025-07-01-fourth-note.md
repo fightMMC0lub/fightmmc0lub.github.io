@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "|--Share Terminal Securely with tmate"
+title: "|--Share Terminal Securely"
 date: 2025-07-01
 tags: [linux, openbsd, macos]
 ---
