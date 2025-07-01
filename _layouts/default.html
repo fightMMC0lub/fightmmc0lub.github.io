@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body style="background-color: black; color: #00ffff; font-family: monospace;">
+<body>
 
-  <header style="text-align: center; padding-top: 30px;">
-    <img src="/assets/img/bbb.png" alt="Profile image"
-         style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 2px solid #00ffff; display: block; margin: 0 auto 15px;">
+  <header class="site-header">
+    <img src="/assets/img/bbb.png" alt="Profile image" class="profile-img">
     
-    <h1 style="margin-bottom: 10px;"><a href="/" style="color: #00ffff; text-decoration: none;">404 Brain Not Found</a></h1>
+    <h1 class="site-title">
+      <a href="/">404 Brain Not Found</a>
+    </h1>
 
-    <nav style="margin-bottom: 10px;">
+    <nav class="site-nav">
       <a href="/">Home</a> |
       <a href="/about.html">About</a> |
       <a href="/contact.html">Contact</a> |
@@ -26,21 +28,20 @@
     <hr>
   </header>
 
+  <main class="site-content">
+    {{ content }}
+  </main>
 
-<main>
-  {{ content }}
-</main>
+  <footer class="site-footer">
+    <hr>
+    <p>
+      🛠 Maintained by 
+      <a href="https://www.linkedin.com/in/fouad-azahaf/" target="_blank" rel="noopener">
+        Fouad Azahaf
+      </a> 
+      | Student @ IFMOTICA Fès | 🇲🇦
+    </p>
+  </footer>
 
-<footer>
-  <hr>
-  <p style="font-size: 0.9em; color: #aaa;">
-    🛠 Maintained by 
-    <a href="https://www.linkedin.com/in/fouad-azahaf/" target="_blank" rel="noopener" style="color: #00ff99;">
-      Fouad Azahaf
-    </a> 
-    | Student @ IFMOTICA Fès | 🇲🇦
-  </p>
-</footer>
 </body>
 </html>
-
