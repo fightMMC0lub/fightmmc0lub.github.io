@@ -4,7 +4,7 @@ title: Archive
 permalink: /archive/
 ---
 
-# 🗂 All Notes
+# Notes for now....
 
 <ul>
   {% for post in site.posts %}
