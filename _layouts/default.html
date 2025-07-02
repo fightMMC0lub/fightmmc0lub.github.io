@@ -48,7 +48,7 @@
 
 
   <div style="text-align: center; margin: 30px;">
-    <button onclick="window.location.href='/'" style="
+    <button onclick="toggleTheme()" style="
       background-color: black;
       color: #00ffff;
       padding: 8px 18px;
@@ -60,9 +60,22 @@
     "
     onmouseover="this.style.backgroundColor='#00ffff'; this.style.color='black';"
     onmouseout="this.style.backgroundColor='black'; this.style.color='#00ffff';">
-      Return to Main
+      Toggle Darkness
     </button>
   </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      if (body.classList.contains('theme-dark')) {
+        body.classList.remove('theme-dark');
+        body.style.backgroundColor = '#1a1a1a';  // lighter black
+      } else {
+        body.classList.add('theme-dark');
+        body.style.backgroundColor = '#000000';  // dark mode
+      }
+    }
+  </script>
 
 </body>
 </html>
