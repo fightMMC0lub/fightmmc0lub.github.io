@@ -7,7 +7,6 @@
 
  <link rel="icon" href="{{ site.baseurl }}/assets/img/chatbot.png" type="image/png">
 
-
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -46,6 +45,24 @@
       | Student @ IFMOTICA Fès | 🇲🇦
     </p>
   </footer>
+
+  <!-- 🔘 Added Return Button -->
+  <div style="text-align: center; margin: 30px;">
+    <button onclick="window.location.href='/'" style="
+      background-color: black;
+      color: #00ffff;
+      padding: 8px 18px;
+      font-family: monospace;
+      font-size: 1em;
+      border: 1px solid #00ffff;
+      border-radius: 4px;
+      cursor: pointer;
+    "
+    onmouseover="this.style.backgroundColor='#00ffff'; this.style.color='black';"
+    onmouseout="this.style.backgroundColor='black'; this.style.color='#00ffff';">
+      Return to Main
+    </button>
+  </div>
 
 </body>
 </html>
