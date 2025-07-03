@@ -3,7 +3,7 @@ layout: default
 title: Notes
 ---
 
-# 📝 General Notes
+# General Notes
 
 
 {% for post in site.posts %}
