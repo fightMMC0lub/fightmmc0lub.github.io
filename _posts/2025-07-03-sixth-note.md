@@ -68,9 +68,11 @@ dolphin-llama3 ollama run 3:70b
   ```
   ## you can run the model by :
   ```bash
-  ollama run dolphin-llama3:8b   # For 8B model
+  ollama run dolphin-llama3:8b   # For 8B model7
+   ```
+   ```bash
   ollama run dolphin-llama3:70b  # For 70B model
-  ```bash
+  ```
 ## for  a user-friendly interface instead of terminal *Chatbox AI*
 - *Download*:
   ```bash
