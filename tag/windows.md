@@ -3,7 +3,7 @@ layout: default
 title: Windows
 ---
 
-# 🐧 Posts tagged with "Windows"
+# Posts tagged with "Windows"
 
 
 {% for post in site.posts %}
