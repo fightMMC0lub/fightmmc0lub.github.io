@@ -1,7 +1,9 @@
+---
 layout: default
 title: "|--Promptless"
 date: 2025-07-03 
 tags: [AI, linux, windows, macos, ollama]
+---
 
 # Dolphin AI - Local Setup Guide
 
