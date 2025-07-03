@@ -3,7 +3,7 @@ layout: default
 title: Openbsd
 ---
 
-# 🐧 Posts tagged with "Openbsd"
+#  Posts tagged with "Openbsd"
 
 
 {% for post in site.posts %}
