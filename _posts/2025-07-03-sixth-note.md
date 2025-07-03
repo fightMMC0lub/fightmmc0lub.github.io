@@ -55,7 +55,7 @@ dolphin-llama3 ollama run 3:70b
 ## Installation and Setup
 - *Ollama* is required to manage *local language models*
    ```bash
-  Download and install from: https://ollama.com
+  Download and install from: [(https://ollama.com)](https://ollama.com)
   ```
 - *verify*:
   ```bash
@@ -76,7 +76,7 @@ dolphin-llama3 ollama run 3:70b
 ## for  a user-friendly interface instead of terminal *Chatbox AI*
 - *Download*:
   ```bash
-  https://chatboxai.app/en#download
+  [(https://chatboxai.app/en#download)](https://chatboxai.app/en#download)
   ```
   # Install and open the application and Go to Settings > Local LLM, and link it to Ollama
   - You have total control over your AI experience when you run Dolphin AI locally. Self-hosting gives you control over whether you want to use it for learning, research and more hahaha.....
