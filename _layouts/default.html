@@ -20,6 +20,15 @@
       75% { color: #ffff00; }
       100% { color: #ff0040; }
     }
+
+    .profile-img {
+      animation: rotateImage 4s linear infinite;
+    }
+
+    @keyframes rotateImage {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
@@ -30,6 +39,7 @@
     <h1 class="site-title">
       <a href="/">404 Brain Not Found</a>
     </h1>
+
 
     <nav class="site-nav">
       <a href="/">Home</a> |
