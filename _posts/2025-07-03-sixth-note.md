@@ -10,14 +10,10 @@ tags: [AI, linux, windows, macos, ollama]
 ## ⚠️ Notice
 This guide is solely meant for **educational purposes**. It is your responsibility how you use this information—use AI sensibly.
 
----
-
 ## Why Use Dolphin AI?
 
 Dolphin Uncensored is a modified AI model that removes standard content restrictions, allowing for unfiltered responses.  
 For those not comfortable with a local setup, **Venice AI** (Premium Plan required) offers a cloud-based alternative.
-
----
 
 ## System Requirements
 
@@ -36,8 +32,6 @@ Before starting, ensure your system meets the requirements.
 - **GPU:** AMD 7900XTX (24GB+ VRAM) or NVIDIA RTX 3090 / 4090  
 - **Storage:** NVMe SSD with 100GB+ free space  
 - **Operating System:** Latest Linux distros, macOS, or Windows 11
-
----
 
 ## Model Variants and Hardware Demands
 
