@@ -35,12 +35,14 @@ export VBOX_GUI_SELECTORWINDOW_RELEASE_LOG_DEST=nofile
 virtualbox
 ```
 #### Option B: Permanent (for all users)
+```bash
 cat >> /etc/environment <<\EOF
 VBOX_RELEASE_LOG_DEST=nofile
 VBOX_LOG_DEST=nofile
 VBOXSVC_RELEASE_LOG_DEST=nofile
 VBOX_GUI_SELECTORWINDOW_RELEASE_LOG_DEST=nofile
 EOF
+```
 
 
 
