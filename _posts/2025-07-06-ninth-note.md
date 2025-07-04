@@ -18,15 +18,28 @@ HTTPS adds a layer of encryption to the HTTP protocol by using secure socket lay
 
 Unfortunately, the encrypted HTTPS traffic complicates network security monitoring. Some security devices include SSL decryption and inspection; however, this can present processing and privacy issues. In addition, HTTPS adds complexity to packet captures due to the additional messaging involved in establishing the encrypted connection. This process is summarized in the figure and represents additional overhead on top of HTTP.
 
-Client browser requests a secure page with https://
---------------------------------------------------------------->
-web server sends its public key with its certificates
-<--------------------------------------------------------------
-Client browser ensures that the certificate is unexpired or unrevoked
-and was issued by trusted party.
-Client browser creates symmetric key and sends it to the server
------------------------------------------------------------------------------->
-Server decrypts symmetric key using its private key
-Server uses symmetric key to encrypt page and sends it to client
-<------------------------------------------------------------------------------
-Client browser uses the symmetric key to decrypt the page and display it to the user. 
+# HTTPS Handshake Flow
+
+```text
+1. Client browser requests a secure page with https:// 
+   -------------------------------------------------->
+
+2. Web server sends its public key with its certificates 
+   <---------------------------------------------------
+
+3. Client browser ensures that the certificate is:
+   - Unexpired
+   - Unrevoked
+   - Issued by a trusted party
+
+4. Client browser creates symmetric key and sends it to the server 
+   -------------------------------------------------->
+
+5. Server decrypts symmetric key using its private key
+
+6. Server uses symmetric key to encrypt page and sends it to client 
+   <---------------------------------------------------
+
+7. Client browser uses the symmetric key to decrypt the page and display it to the user.
+```
+
