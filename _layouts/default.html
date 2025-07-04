@@ -5,9 +5,22 @@
   <title> 404: No Brain</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <link rel="icon" href="{{ site.baseurl }}/assets/img/chatbot.png" type="image/png">
+  <link rel="icon" href="{{ site.baseurl }}/assets/img/chatbot.png" type="image/png">
 
   <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .site-title a {
+      animation: colorChange 5s infinite;
+    }
+
+    @keyframes colorChange {
+      0% { color: #ff0040; }
+      25% { color: #00ffff; }
+      50% { color: #00ff00; }
+      75% { color: #ffff00; }
+      100% { color: #ff0040; }
+    }
+  </style>
 </head>
 <body>
 
@@ -30,6 +43,7 @@
     </nav>
     <hr>
   </header>
+
 
   <main class="site-content">
     {{ content }}
