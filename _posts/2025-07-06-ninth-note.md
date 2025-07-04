@@ -17,3 +17,16 @@ To address the alteration or interception of confidential data, many commercial 
 HTTPS adds a layer of encryption to the HTTP protocol by using secure socket layer (SSL). This makes the HTTP data unreadable as it leaves the source computer until it reaches the server. Note that HTTPS is not a mechanism for web server security. It only secures HTTP protocol traffic while it is in transit.
 
 Unfortunately, the encrypted HTTPS traffic complicates network security monitoring. Some security devices include SSL decryption and inspection; however, this can present processing and privacy issues. In addition, HTTPS adds complexity to packet captures due to the additional messaging involved in establishing the encrypted connection. This process is summarized in the figure and represents additional overhead on top of HTTP.
+
+Client browser requests a secure page with https://
+--------------------------------------------------------------->
+web server sends its public key with its certificates
+<--------------------------------------------------------------
+Client browser ensures that the certificate is unexpired or unrevoked
+and was issued by trusted party.
+Client browser creates symmetric key and sends it to the server
+------------------------------------------------------------------------------>
+Server decrypts symmetric key using its private key
+Server uses symmetric key to encrypt page and sends it to client
+<------------------------------------------------------------------------------
+Client browser uses the symmetric key to decrypt the page and display it to the user. 
