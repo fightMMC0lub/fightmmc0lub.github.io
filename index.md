@@ -4,21 +4,38 @@ title: Home
 ---
 
 <style>
-  /* Matrix Background */
   body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-x: hidden;
     background: black;
     font-family: 'Courier New', Courier, monospace;
+    color: #00ffcc;
+    overflow-x: hidden;
   }
 
-  canvas#matrix {
+  .terminal-bg {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .scroll-text {
+    white-space: pre;
+    animation: scroll 30s linear infinite;
+    font-size: 13px;
+    opacity: 0.15;
+    line-height: 1.2em;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
   }
 
   .welcome-banner {
@@ -29,19 +46,16 @@ title: Home
   }
 
   @keyframes flicker {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 1; }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
   }
 
   ul.notes-list {
     list-style: none;
     padding-left: 0;
-    font-family: 'Courier New', Courier, monospace;
-    color: #00ffcc;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem;
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 10px #00ffcc40;
   }
 
@@ -63,7 +77,7 @@ title: Home
   }
 
   span.year {
-    background-color: #111111;
+    background-color: #111;
     color: #ff0099;
     padding: 0.2em 0.6em;
     border-radius: 4px;
@@ -88,12 +102,37 @@ title: Home
   }
 </style>
 
-<!-- Matrix Canvas Background -->
-<canvas id="matrix"></canvas>
+<!-- Terminal Scrolling Background -->
+<div class="terminal-bg">
+  <div class="scroll-text">
+Welcome to the 0xTechWorld Terminal...
+Initializing protocols...
+Verifying environment...
+Bypassing firewall...
+Extracting metadata...
+Collecting .onion gateways...
+Injecting payload...
+Launching recon module...
+Scanning ports...
+Enumerating subdomains...
+Decrypting session...
+Uploading exploit script...
+Root access granted...
+Deploying virtual shell...
+Connection stabilized...
+Monitoring network...
+Hping3 deployed...
+Promptless AI loaded...
+Ghost VM booted...
+AuthGhost authenticating...
+Http vs Https validated...
+Welcome back, Operative.
+  </div>
+</div>
 
-<!-- Custom Hacker Welcome Message -->
+<!-- Welcome Banner -->
 <div class="welcome-banner">
-  |-- Welcome back, Operative. Initializing system... |
+  |-- System online. Select a note --|
 </div>
 
 <!-- Notes List -->
@@ -107,34 +146,3 @@ title: Home
 </ul>
 
 
-<script>
-  const canvas = document.getElementById("matrix");
-  const ctx = canvas.getContext("2d");
-
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
-
-  const letters = "01F0U4D4 0xTECHWORLD WELCOME BACK INITIALIZING SYSTEM ...".split("");
-  const fontSize = 14;
-  const columns = canvas.width / fontSize;
-
-  const drops = Array(Math.floor(columns)).fill(1);
-
-  function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#0f0";
-    ctx.font = fontSize + "px monospace";
-
-    for (let i = 0; i < drops.length; i++) {
-      const text = letters[Math.floor(Math.random() * letters.length)];
-      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-      if (drops[i] * fontSize > canvas.height || Math.random() > 0.975) {
-        drops[i] = 0;
-      }
-      drops[i]++;
-    }
-  }
-
-  setInterval(drawMatrix, 50);
-</script>
