@@ -2,118 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>404: Brain Not Found</title>
+  <title> 404: No Brain</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="icon" href="{{ site.baseurl }}/assets/img/chatbot.png" type="image/png">
+
   <link rel="stylesheet" href="/assets/css/style.css">
-
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #0a0a0a;
-      font-family: 'Courier New', monospace;
-      color: #00ffcc;
+    .site-title a {
+      animation: colorChange 5s infinite;
     }
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      background-color: #000000d0;
-      box-shadow: 0 0 20px #00ffcc30;
-      border-radius: 8px;
-      margin-top: 50px;
+    @keyframes colorChange {
+      0% { color: #ff0040; }
+      25% { color: #00ffff; }
+      50% { color: #00ff00; }
+      75% { color: #ffff00; }
+      100% { color: #ff0040; }
     }
 
-    h1 {
-      color: #ff0040;
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 10px;
-      animation: flicker 2s infinite;
+    .profile-img {
+      animation: rotateImage 4s linear infinite;
     }
 
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.8; }
-    }
-
-    .message {
-      text-align: center;
-      color: #999;
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    ul.notes-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul.notes-list li {
-      margin-bottom: 10px;
-    }
-
-    ul.notes-list a {
-      color: #00ffff;
-      text-decoration: none;
-      padding-left: 10px;
-      border-left: 3px solid #00ffff;
-      transition: 0.2s ease;
-    }
-
-    ul.notes-list a:hover {
-      color: #ff00cc;
-      border-left-color: #ff00cc;
-    }
-
-    span.year {
-      background-color: #111;
-      color: #ff0099;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-weight: bold;
-      margin-left: 10px;
-      font-size: 0.9rem;
-    }
-
-    .back-link {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .back-link a {
-      color: #999;
-      text-decoration: underline;
-    }
-
-    .back-link a:hover {
-      color: #00ffcc;
+    @keyframes rotateImage {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>> 404 ERROR</h1>
-    <div class="message">
-      Brain not found. You’ve reached a dead end, but here are some of my recent notes:
-    </div>
+  <header class="site-header">
+    <img src="/assets/img/b4bbb.png" alt="Profile image" class="profile-img">
+    
+    <h1 class="site-title">
+      <a href="/">404 Brain Not Found</a>
+    </h1>
 
-    <ul class="notes-list">
-      {% for post in site.posts limit: 5 %}
-        <li>
-          <a href="{{ post.url }}">|-- {{ post.title }}</a>
-          <span class="year">{{ post.date | date: "%Y" }}</span>
-        </li>
-      {% endfor %}
-    </ul>
 
-    <div class="back-link">
-      <a href="{{ site.baseurl }}/"← Back to safety</a>
-    </div>
+    <nav class="site-nav">
+      <a href="/">Home</a> |
+      <a href="/about.html">About</a> |
+      <a href="/contact.html">Contact</a> |
+      <a href="/vault.html">Vault</a> |
+      <a href="/fragments.html">Fragments</a> |
+      <a href="/edu.html">edu</a> |
+      <a href="/trace.html">Trace</a> |
+      <a href="/keys.html">Keys</a>
+    </nav>
+    <hr>
+  </header>
+
+
+  <main class="site-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <hr>
+    <p>
+      Maintained by 
+      <a href="https://www.linkedin.com/in/fouad-azahaf/" target="_blank" rel="noopener">
+        Fouad Azahaf
+      </a> 
+      | Student @ IFMOTICA Fès | 🇲🇦
+    </p>
+  </footer>
+
+
+  <div style="text-align: center; margin: 30px;">
+    <button onclick="toggleTheme()" style="
+      background-color: black;
+      color: #00ffff;
+      padding: 8px 18px;
+      font-family: monospace;
+      font-size: 1em;
+      border: 1px solid #00ffff;
+      border-radius: 4px;
+      cursor: pointer;
+    "
+    onmouseover="this.style.backgroundColor='#00ffff'; this.style.color='black';"
+    onmouseout="this.style.backgroundColor='black'; this.style.color='#00ffff';">
+      chcolor
+    </button>
   </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      if (body.classList.contains('theme-dark')) {
+        body.classList.remove('theme-dark');
+        body.style.backgroundColor = '#1a1a1a';  // lighter black
+      } else {
+        body.classList.add('theme-dark');
+        body.style.backgroundColor = '#000000';  // dark mode
+      }
+    }
+  </script>
 
 </body>
 </html>
