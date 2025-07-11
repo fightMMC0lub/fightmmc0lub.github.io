@@ -2,77 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> 404: No Brain</title>
+  <title>404: Brain Not Found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" href="{{ site.baseurl }}/assets/img/chatbot.png" type="image/png">
-
   <link rel="stylesheet" href="/assets/css/style.css">
+
   <style>
-    .site-title a {
-      animation: colorChange 5s infinite;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      background-color: black;
+      color: #00ffcc;
+      font-family: 'Courier New', Courier, monospace;
     }
 
-    @keyframes colorChange {
-      0% { color: #ff0040; }
-      25% { color: #00ffff; }
-      50% { color: #00ff00; }
-      75% { color: #ffff00; }
-      100% { color: #ff0040; }
+    canvas#matrixRain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      background: black;
+      width: 100%;
+      height: 100%;
     }
 
     .profile-img {
       animation: rotateImage 4s linear infinite;
+      width: 60px;
+      height: auto;
     }
 
     @keyframes rotateImage {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-  </style>
-</head>
-<body>
 
-  <header class="site-header">
-    <img src="/assets/img/b4bbb.png" alt="Profile image" class="profile-img">
-    
-    <h1 class="site-title">
-      <a href="/">404 Brain Not Found</a>
-    </h1>
+    .site-title {
+      text-align: center;
+      margin-top: 20px;
+    }
 
+    .glitch {
+      color: #00ffff;
+      position: relative;
+      display: inline-block;
+      font-size: 2em;
+    }
 
-    <nav class="site-nav">
-      <a href="/">Home</a> |
-      <a href="/about.html">About</a> |
-      <a href="/contact.html">Contact</a> |
-      <a href="/vault.html">Vault</a> |
-      <a href="/fragments.html">Fragments</a> |
-      <a href="/edu.html">edu</a> |
-      <a href="/trace.html">Trace</a> |
-      <a href="/keys.html">Keys</a>
-    </nav>
-    <hr>
-  </header>
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      color: #ff00cc;
+      clip: rect(0, 0, 0, 0);
+    }
 
+    .glitch::before {
+      animation: glitchTop 1s infinite linear alternate-reverse;
+      top: -2px;
+    }
 
-  <main class="site-content">
-    {{ content }}
-  </main>
+    .glitch::after {
+      animation: glitchBot 1s infinite linear alternate-reverse;
+      bottom: -2px;
+    }
 
-  <footer class="site-footer">
-    <hr>
-    <p>
-      Maintained by 
-      <a href="https://www.linkedin.com/in/fouad-azahaf/" target="_blank" rel="noopener">
-        Fouad Azahaf
-      </a> 
-      | Student @ IFMOTICA Fès | 🇲🇦
-    </p>
-  </footer>
+    @keyframes glitchTop {
+      0% { clip: rect(0, 9999px, 0, 0); }
+      50% { clip: rect(0, 9999px, 10px, 0); }
+      100% { clip: rect(0, 9999px, 0, 0); }
+    }
 
+    @keyframes glitchBot {
+      0% { clip: rect(0, 9999px, 0, 0); }
+      50% { clip: rect(10px, 9999px, 9999px, 0); }
+      100% { clip: rect(0, 9999px, 0, 0); }
+    }
 
-  <div style="text-align: center; margin: 30px;">
-    <button onclick="toggleTheme()" style="
+    .site-nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .site-nav a {
+      color: #00ffcc;
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .terminal-box {
+      font-family: monospace;
+      color: #00ffcc;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00ffcc30;
+      width: 80%;
+      margin: 2rem auto;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+
+    .error-code {
+      color: #ff0040;
+      font-weight: bold;
+    }
+
+    .blink {
+      animation: blink 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+      to { visibility: hidden; }
+    }
+
+    .site-footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .site-footer a {
+      color: #999;
+    }
+
+    .site-footer a:hover {
+      color: #ff00cc;
+    }
+
+    .color-button {
+      display: block;
+      margin: 20px auto;
       background-color: black;
       color: #00ffff;
       padding: 8px 18px;
@@ -81,25 +148,108 @@
       border: 1px solid #00ffff;
       border-radius: 4px;
       cursor: pointer;
-    "
-    onmouseover="this.style.backgroundColor='#00ffff'; this.style.color='black';"
-    onmouseout="this.style.backgroundColor='black'; this.style.color='#00ffff';">
-      chcolor
-    </button>
-  </div>
-
-  <script>
-    function toggleTheme() {
-      const body = document.body;
-      if (body.classList.contains('theme-dark')) {
-        body.classList.remove('theme-dark');
-        body.style.backgroundColor = '#1a1a1a';  // lighter black
-      } else {
-        body.classList.add('theme-dark');
-        body.style.backgroundColor = '#000000';  // dark mode
-      }
     }
-  </script>
+
+    .color-button:hover {
+      background-color: #00ffff;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="matrixRain"></canvas>
+
+<header class="site-header" style="text-align: center;">
+  <img src="/assets/img/b4bbb.png" alt="Profile image" class="profile-img">
+  <h1 class="site-title">
+    <span class="glitch" data-text="404 BRAIN NOT FOUND">404 BRAIN NOT FOUND</span>
+  </h1>
+  <nav class="site-nav">
+    <a href="/">Home</a> |
+    <a href="/about.html">About</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/vault.html">Vault</a> |
+    <a href="/fragments.html">Fragments</a> |
+    <a href="/edu.html">Edu</a> |
+    <a href="/trace.html">Trace</a> |
+    <a href="/keys.html">Keys</a>
+  </nav>
+  <hr>
+</header>
+
+<main class="site-content">
+  <div class="terminal-box">
+    <p>> SYSTEM FAILURE: <span class="error-code">[ 404 ]</span></p>
+    <p>> REASON: BRAIN NOT FOUND</p>
+    <p>> ATTEMPTING MEMORY DUMP...</p>
+    <p>> RETRYING CONNECTION TO NEURAL NETWORK...</p>
+    <p class="blink">>_</p>
+  </div>
+</main>
+
+<div style="text-align: center;">
+  <button class="color-button" onclick="toggleTheme()">chcolor</button>
+</div>
+
+<footer class="site-footer">
+  <hr>
+  <p>
+    Maintained by 
+    <a href="https://www.linkedin.com/in/fouad-azahaf/" target="_blank" rel="noopener">
+      Fouad Azahaf
+    </a> 
+    | Student @ IFMOTICA Fès | 🇲🇦
+  </p>
+</footer>
+
+<!-- Optional Sound (add your own mp3 to /assets/sfx/) -->
+<!--
+<audio autoplay hidden>
+  <source src="/assets/sfx/error404.mp3" type="audio/mpeg">
+</audio>
+-->
+
+<script>
+  // Matrix rain effect
+  const canvas = document.getElementById('matrixRain');
+  const ctx = canvas.getContext('2d');
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+
+  const letters = '01BRAIN404TECHWORLDERRORNEURALNOPROCESSORHAXX0R'.split('');
+  const fontSize = 12;
+  const columns = canvas.width / fontSize;
+  const drops = new Array(Math.floor(columns)).fill(1);
+
+  function draw() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#00ff00';
+    ctx.font = `${fontSize}px monospace`;
+
+    drops.forEach((y, i) => {
+      const text = letters[Math.floor(Math.random() * letters.length)];
+      ctx.fillText(text, i * fontSize, y * fontSize);
+      if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+      drops[i]++;
+    });
+  }
+
+  setInterval(draw, 40);
+
+  // Color toggle
+  function toggleTheme() {
+    const body = document.body;
+    if (body.classList.contains('theme-dark')) {
+      body.classList.remove('theme-dark');
+      body.style.backgroundColor = '#1a1a1a';
+    } else {
+      body.classList.add('theme-dark');
+      body.style.backgroundColor = '#000000';
+    }
+  }
+</script>
 
 </body>
 </html>
