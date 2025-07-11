@@ -14,5 +14,3 @@ highlighter: rouge
 permalink: /:year/:month/:title/
 
 
-include:
-  - _pages
