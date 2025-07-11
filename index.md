@@ -106,11 +106,6 @@ title: Home
   {% endfor %}
 </ul>
 
-<div class="links">
-  <a href="/archive/">Archive</a>
-  <a href="/tags/">Tags</a>
-</div>
-
 
 <script>
   const canvas = document.getElementById("matrix");
