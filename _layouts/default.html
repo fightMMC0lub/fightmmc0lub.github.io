@@ -8,248 +8,112 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <style>
-    body, html {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      overflow-x: hidden;
-      background-color: black;
+      background-color: #0a0a0a;
+      font-family: 'Courier New', monospace;
       color: #00ffcc;
-      font-family: 'Courier New', Courier, monospace;
     }
 
-    canvas#matrixRain {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -2;
-      background: black;
-      width: 100%;
-      height: 100%;
-    }
-
-    .profile-img {
-      animation: rotateImage 4s linear infinite;
-      width: 60px;
-      height: auto;
-    }
-
-    @keyframes rotateImage {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .site-title {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .glitch {
-      color: #00ffff;
-      position: relative;
-      display: inline-block;
-      font-size: 2em;
-    }
-
-    .glitch::before,
-    .glitch::after {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      color: #ff00cc;
-      clip: rect(0, 0, 0, 0);
-    }
-
-    .glitch::before {
-      animation: glitchTop 1s infinite linear alternate-reverse;
-      top: -2px;
-    }
-
-    .glitch::after {
-      animation: glitchBot 1s infinite linear alternate-reverse;
-      bottom: -2px;
-    }
-
-    @keyframes glitchTop {
-      0% { clip: rect(0, 9999px, 0, 0); }
-      50% { clip: rect(0, 9999px, 10px, 0); }
-      100% { clip: rect(0, 9999px, 0, 0); }
-    }
-
-    @keyframes glitchBot {
-      0% { clip: rect(0, 9999px, 0, 0); }
-      50% { clip: rect(10px, 9999px, 9999px, 0); }
-      100% { clip: rect(0, 9999px, 0, 0); }
-    }
-
-    .site-nav {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .site-nav a {
-      color: #00ffcc;
-      margin: 0 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .terminal-box {
-      font-family: monospace;
-      color: #00ffcc;
-      background-color: rgba(0, 0, 0, 0.75);
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #00ffcc30;
-      width: 80%;
-      margin: 2rem auto;
-      line-height: 1.5;
-      font-size: 16px;
-    }
-
-    .error-code {
-      color: #ff0040;
-      font-weight: bold;
-    }
-
-    .blink {
-      animation: blink 1s steps(2, start) infinite;
-    }
-
-    @keyframes blink {
-      to { visibility: hidden; }
-    }
-
-    .site-footer {
-      text-align: center;
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #000000d0;
+      box-shadow: 0 0 20px #00ffcc30;
+      border-radius: 8px;
       margin-top: 50px;
-      font-size: 14px;
-      color: #666;
     }
 
-    .site-footer a {
+    h1 {
+      color: #ff0040;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 10px;
+      animation: flicker 2s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
+    .message {
+      text-align: center;
       color: #999;
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
 
-    .site-footer a:hover {
-      color: #ff00cc;
+    ul.notes-list {
+      list-style: none;
+      padding: 0;
     }
 
-    .color-button {
-      display: block;
-      margin: 20px auto;
-      background-color: black;
+    ul.notes-list li {
+      margin-bottom: 10px;
+    }
+
+    ul.notes-list a {
       color: #00ffff;
-      padding: 8px 18px;
-      font-family: monospace;
-      font-size: 1em;
-      border: 1px solid #00ffff;
-      border-radius: 4px;
-      cursor: pointer;
+      text-decoration: none;
+      padding-left: 10px;
+      border-left: 3px solid #00ffff;
+      transition: 0.2s ease;
     }
 
-    .color-button:hover {
-      background-color: #00ffff;
-      color: black;
+    ul.notes-list a:hover {
+      color: #ff00cc;
+      border-left-color: #ff00cc;
+    }
+
+    span.year {
+      background-color: #111;
+      color: #ff0099;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 0.9rem;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-link a {
+      color: #999;
+      text-decoration: underline;
+    }
+
+    .back-link a:hover {
+      color: #00ffcc;
     }
   </style>
 </head>
 <body>
 
-<canvas id="matrixRain"></canvas>
+  <div class="container">
+    <h1>> 404 ERROR</h1>
+    <div class="message">
+      Brain not found. You’ve reached a dead end, but here are some of my recent notes:
+    </div>
 
-<header class="site-header" style="text-align: center;">
-  <img src="/assets/img/b4bbb.png" alt="Profile image" class="profile-img">
-  <h1 class="site-title">
-    <span class="glitch" data-text="404 BRAIN NOT FOUND">404 BRAIN NOT FOUND</span>
-  </h1>
-  <nav class="site-nav">
-    <a href="/">Home</a> |
-    <a href="/about.html">About</a> |
-    <a href="/contact.html">Contact</a> |
-    <a href="/vault.html">Vault</a> |
-    <a href="/fragments.html">Fragments</a> |
-    <a href="/edu.html">Edu</a> |
-    <a href="/trace.html">Trace</a> |
-    <a href="/keys.html">Keys</a>
-  </nav>
-  <hr>
-</header>
+    <ul class="notes-list">
+      {% for post in site.posts limit: 5 %}
+        <li>
+          <a href="{{ post.url }}">|-- {{ post.title }}</a>
+          <span class="year">{{ post.date | date: "%Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
 
-<main class="site-content">
-  <div class="terminal-box">
-    <p>> SYSTEM FAILURE: <span class="error-code">[ 404 ]</span></p>
-    <p>> REASON: BRAIN NOT FOUND</p>
-    <p>> ATTEMPTING MEMORY DUMP...</p>
-    <p>> RETRYING CONNECTION TO NEURAL NETWORK...</p>
-    <p class="blink">>_</p>
+    <div class="back-link">
+      <a href="/">← Back to safety</a>
+    </div>
   </div>
-</main>
-
-<div style="text-align: center;">
-  <button class="color-button" onclick="toggleTheme()">chcolor</button>
-</div>
-
-<footer class="site-footer">
-  <hr>
-  <p>
-    Maintained by 
-    <a href="https://www.linkedin.com/in/fouad-azahaf/" target="_blank" rel="noopener">
-      Fouad Azahaf
-    </a> 
-    | Student @ IFMOTICA Fès | 🇲🇦
-  </p>
-</footer>
-
-<!-- Optional Sound (add your own mp3 to /assets/sfx/) -->
-<!--
-<audio autoplay hidden>
-  <source src="/assets/sfx/error404.mp3" type="audio/mpeg">
-</audio>
--->
-
-<script>
-  // Matrix rain effect
-  const canvas = document.getElementById('matrixRain');
-  const ctx = canvas.getContext('2d');
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
-
-  const letters = '01BRAIN404TECHWORLDERRORNEURALNOPROCESSORHAXX0R'.split('');
-  const fontSize = 12;
-  const columns = canvas.width / fontSize;
-  const drops = new Array(Math.floor(columns)).fill(1);
-
-  function draw() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#00ff00';
-    ctx.font = `${fontSize}px monospace`;
-
-    drops.forEach((y, i) => {
-      const text = letters[Math.floor(Math.random() * letters.length)];
-      ctx.fillText(text, i * fontSize, y * fontSize);
-      if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-      drops[i]++;
-    });
-  }
-
-  setInterval(draw, 40);
-
-  // Color toggle
-  function toggleTheme() {
-    const body = document.body;
-    if (body.classList.contains('theme-dark')) {
-      body.classList.remove('theme-dark');
-      body.style.backgroundColor = '#1a1a1a';
-    } else {
-      body.classList.add('theme-dark');
-      body.style.backgroundColor = '#000000';
-    }
-  }
-</script>
 
 </body>
 </html>
