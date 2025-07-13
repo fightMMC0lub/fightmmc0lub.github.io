@@ -2,18 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>404: No Brain</title>
+  <title>Notes & Thoughts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="{{ site.baseurl }}/assets/img/chatbot.png" type="image/png">
-
+  <link rel="icon" href="{{ site.baseurl }}/assets/img/pro2file.jpg" type="image/jpg">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .site-header {
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+
+    .site-title a {
+      font-size: 2em;
+      text-decoration: none;
+      color: #ff0040;
+      animation: colorChange 5s infinite;
+    }
+
+    @keyframes colorChange {
+      0% { color: #ff0040; }
+      25% { color: #00ffff; }
+      50% { color: #00ff00; }
+      75% { color: #ffff00; }
+      100% { color: #ff0040; }
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.8em;
+      color: #00ffff;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    a {
+      color: #3aff3a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      margin-top: 25px;
+      background: none;
+      border: 1px solid #3aff3a;
+      color: #3aff3a;
+      padding: 8px 18px;
+      font-family: monospace;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3aff3a;
+      color: #000;
+    }
+  </style>
 </head>
 <body>
-
-  <header class="site-header">
-    <img src="/assets/img/bbb.png" alt="Profile image" class="profile-img">
-<body>
+  
+  <main>
   
 <h1>About Me</h1>
 <p>
