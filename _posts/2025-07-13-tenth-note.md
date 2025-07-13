@@ -634,6 +634,6 @@ A big collection of OSINT tools and links to help you dig deep. Use them wisely,
 - [comskills-ukraine.co.uk](https://comskills-ukraine.co.uk/resources/osint-toolkit/) - OSINT Toolkit
 - [searchisback.com](https://searchisback.com/) - Find people and events on Facebook, Search by location, relationships, more...
 
- [🔗 If you want a full list of categorized OSINT tools, check out my repo:](https://github.com/fightMMC0lub/CyberIntelligence-Toolkit)
-
+ 🔗 If you want a full list of categorized OSINT tools, check out my repo: 
+ [CyberIntelligence-Toolkit](https://github.com/fightMMC0lub/CyberIntelligence-Toolkit)
 *I’ll be publishing another list soon*
