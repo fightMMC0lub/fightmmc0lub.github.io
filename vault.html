@@ -51,14 +51,17 @@
   
 <button onclick="window.location.href='/'" style="
   background: none;
-  border: 1px solid #999;
-  color: #999;
+  border: 1px solid #3aff3a;
+  color: #3aff3a;
   padding: 8px 18px;
   font-family: monospace;
   font-size: 1em;
-  border-radius: 3px;
+  border-radius: 4px;
   cursor: pointer;
-">
+  transition: background-color 0.3s ease, color 0.3s ease;
+"
+onmouseover="this.style.backgroundColor='#3aff3a'; this.style.color='#000';"
+onmouseout="this.style.backgroundColor='transparent'; this.style.color='#3aff3a';">
   Return to Base
 </button>
 </body>
