@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Trace</title>
+  <title>Notes & Thoughts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="{{ site.baseurl }}/assets/img/pro2file.jpg" type="image/jpg">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <style>
@@ -27,19 +29,40 @@
       margin-bottom: 30px;
     }
 
-    h1 {
+    .site-title a {
       font-size: 2em;
-      color: #00ffff;
-      animation: glowText 3s ease-in-out infinite alternate;
+      text-decoration: none;
+      color: #ff0040;
+      animation: colorChange 5s infinite;
     }
 
-    @keyframes glowText {
-      from {
-        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
-      }
-      to {
-        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-      }
+    @keyframes colorChange {
+      0% { color: #ff0040; }
+      25% { color: #00ffff; }
+      50% { color: #00ff00; }
+      75% { color: #ffff00; }
+      100% { color: #ff0040; }
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.8em;
+      color: #00ffff;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    a {
+      color: #3aff3a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     button {
@@ -62,8 +85,8 @@
   </style>
 </head>
 <body>
-
-  <header class="site-header">
+  
+  <main>
     <h1>Trace</h1>
     <p></p>
   </header>
