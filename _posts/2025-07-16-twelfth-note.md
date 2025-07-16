@@ -9,9 +9,9 @@ tags: [networking, protocols, dns]
 
 > **Disclaimer:** This guide is for **educational purposes only**. Use it responsibly.
 
-This note is focusing on `responder` and ARP poisoning — specifically, how to use `responder` **without being on the same network**.
+This note is focusing on `responder` and ARP poisoning specifically, how to use `responder` **without being on the same network**.
 
-I'm not going to explain how `responder` works in detail — there are plenty of great guides out there. Same goes for LLMNR, NBT-NS, and MDNS poisoning.
+I'm not going to explain how `responder` works in detail there are plenty of great guides out there. Same goes for LLMNR, NBT-NS, and MDNS poisoning.
 
 ---
 
