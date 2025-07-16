@@ -13,7 +13,6 @@ This note is focusing on `responder` and ARP poisoning specifically, how to use 
 
 I'm not going to explain how `responder` works in detail there are plenty of great guides out there. Same goes for LLMNR, NBT-NS, and MDNS poisoning.
 
----
 
 ## Table of Contents
 
@@ -21,7 +20,6 @@ I'm not going to explain how `responder` works in detail there are plenty of gre
 - [Packets Everywhere](#packets-everywhere)  
 - [SMB Relaying](#smb-relaying)
 
----
 
 ## Introduction
 
@@ -31,7 +29,6 @@ here’s how to use `responder` without being directly on the target network. Th
 
 This tool works by exploiting Windows name resolution protocols like LLMNR, which kicks in when DNS fails — essentially acting like another type of ARP poisoning.
 
----
 
 ## Packets Everywhere
 
@@ -56,7 +53,6 @@ Free/DIY options include:
 - WinPcap install (DLLs/drivers – requires admin):  
    [Winpcap_Install](https://github.com/3gstudent/Winpcap_Install)
 
----
 
 ### 2. Port Hijacking
 
@@ -66,7 +62,6 @@ A quick workaround is to redirect SMB traffic to your own server with a tool lik
 
 This lets you capture NetNTLMv2 hashes remotely.
 
----
 
 ## SMB Relaying
 
