@@ -22,7 +22,7 @@ I'm not going to explain how `responder` works in detail there are plenty of gre
 
 
 ## Introduction
----
+
 here’s how to use `responder` without being directly on the target network. The idea is to demonstrate how you can listen to broadcasts and perform relay attacks remotely.
 
 `Responder` is typically used to gather credentials. If you can’t relay the hashes, just crack them.
