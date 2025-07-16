@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "|--History_Collector"
+title: "|--History*Collector"
 date: 2025-07-17
 tags: [data, bashScript]
 ---
