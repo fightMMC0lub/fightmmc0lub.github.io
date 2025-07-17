@@ -23,7 +23,7 @@ This script is for **educational purposes only**...
 
 ## Batch Script
 
-<pre> <code> ```batch
+```batch
 @echo off
 echo Gathering Browser Information...
 echo =====================================
@@ -64,7 +64,7 @@ echo =====================================
 echo Information has been gathered.
 pause
 
-``` </code> </pre>
+```
 
 ## How to Save This Script
 
