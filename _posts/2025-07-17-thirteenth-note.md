@@ -2,7 +2,7 @@
 layout: default
 title: "|--HistoryCollector"
 date: 2025-07-17
-tags: [data, bashScript]
+tags: [data, bashScript ]
 ---
 
 # Browser History Collector (Windows Batch Script)
