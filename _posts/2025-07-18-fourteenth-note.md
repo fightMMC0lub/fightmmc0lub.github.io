@@ -2,7 +2,7 @@
 layout: default
 title: "|--Run_init_levels"
 date: 2025-07-18
-tags: [linux, openbsd, wsl, macos ]
+tags: [linux, openbsd, wsl, macos]
 ---
 
 ## Linux Standard Runlevels
@@ -43,5 +43,4 @@ This reference explains the standard Linux runlevels:
   <summary>6 – Reboot</summary>
   <p>Reboots the system.</p>
 </details>
-
 
