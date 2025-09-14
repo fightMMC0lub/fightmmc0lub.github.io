@@ -1,3 +1,10 @@
+---
+layout: default
+title: "|--OWSAP"
+date: 2025-07-18
+tags: [linux, openbsd, wsl, macos]
+---
+
 # 🛡️ OWASP Top 10 (2021) — Visual Cheat Sheet
 
 | # | OWASP Item | 📝 Simple Definition | 💥 Example Attacks |
