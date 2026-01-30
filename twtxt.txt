@@ -1,10 +1,8 @@
 2026-01-29T20:00:00+00:00    Welcome!!
-<<<<<<< HEAD
+=======
 2026-01-29T16:27:13+0000	github.com/kgretzky/evilginx2/wiki
 It explains how to install, set up domains, create phishlets, and run everything.
 If that’s too much, search YouTube for “evilginx2 full setup”, there are some decent tutorials out there.
 Evilginx2 is a man in the middle phishing framework.
 It doesn’t just grab login creds, it catches session tokens so you can bypass 2FA if it’s set up right.
 =======
-2026-01-29T16:27:13+0000    github.com/kgretzky/evilginx2/wiki
->>>>>>> fc6dac8 (test124)
